@@ -63,6 +63,11 @@ def missionSetting():
     return render_template("missionSetting.html")
 
 
+@app.route('/feedback')
+def feedback():
+
+    return render_template("feedback.html")
+
 
 @app.route('/goaltables')
 def goalTables():
