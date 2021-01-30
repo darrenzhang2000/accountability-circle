@@ -49,6 +49,80 @@ def signup():
     return render_template("register.html")
 
 
+@app.route('/missioncategories')
+def missionCategories():
+
+    mission_categories = ["Health", "Tech Interviews", "Academics"]
+
+    return render_template("missionCategories.html", mission_categories = mission_categories)
+
+
+@app.route('/missionsetting')
+def missionSetting():
+
+    return render_template("missionSetting.html")
+
+
+
+@app.route('/goaltables')
+def goalTables():
+    your_goals = [
+        {
+            "date": "01-30-2021",
+            "goal": "Do 5 LeetCode questions"
+        },
+        {
+            "date": "02-07-2021",
+            "goal": "Do 5 LeetCode questions"
+        },
+        {
+            "date": "02-14-2021",
+            "goal": "Do 10 LeetCode questions"
+        },
+        {
+            "date": "02-21-2021",
+            "goal": "Do 10 LeetCode questions"
+        },
+        {
+            "date": "03-01-2021",
+            "goal": "Do 10 LeetCode questions"
+        },
+        {
+            "date": "03-07-2021",
+            "goal": "Do 15 LeetCode questions"
+        }
+    ]
+
+
+    partner_goals = [
+        {
+            "date": "01-30-2021",
+            "goal": "Do 3 LeetCode questions"
+        },
+        {
+            "date": "02-07-2021",
+            "goal": "Do 3 LeetCode questions"
+        },
+        {
+            "date": "02-14-2021",
+            "goal": "Do 5 LeetCode questions"
+        },
+        {
+            "date": "02-21-2021",
+            "goal": "Do 5 LeetCode questions"
+        },
+        {
+            "date": "03-01-2021",
+            "goal": "Do 10 LeetCode questions"
+        },
+        {
+            "date": "03-07-2021",
+            "goal": "Do 15 LeetCode questions"
+        }
+    ]
+
+    return render_template("goalTables.html", your_goals = your_goals, partner_goals = partner_goals)
+
 
 if __name__ == '__main__':
     app.run()
