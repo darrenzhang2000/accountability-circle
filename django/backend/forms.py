@@ -5,8 +5,7 @@ from . import models
 class UserForm(forms.ModelForm):
     pass
     
-class GoalsForm(forms.ModelForm):
-
+class MissionForm(forms.ModelForm):
     class Meta:
-        model = models.Goals
+        model = models.Mission
         fields = ['goal']

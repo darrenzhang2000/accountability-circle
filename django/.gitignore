@@ -136,3 +136,7 @@ dmypy.json
 
 # Cython debug symbols
 cython_debug/
+
+# Sensitive iformation
+backend/Credentials.py
+project/Credentials.py

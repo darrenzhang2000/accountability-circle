@@ -7,9 +7,9 @@
 </head>
 <body>
     <h1>Mission Categories</h1>
-    {% for mission in mission_categories %}
+    {% for mission in missions %}
         <ul>
-            <li> {{ mission }} </li>
+            <li> {{ mission.mission }} </li>
         </ul>
     {% endfor %}
 </body>

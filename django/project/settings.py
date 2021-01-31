@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 from pathlib import Path
 import os
 from os import path
+from . import Credentials
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -113,6 +114,16 @@ LOGIN_REDIRECT_URL = '/'
 
 # Authenticate with email
 AUTHENTICATION_BACKENDS = ['backend.Authentication.EmailBackend']
+
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.outlook.com'
+EMAIL_PORT = '25'
+EMAIL_HOST_USER = Credentials.credentials['email']
+EMAIL_HOST_PASSWORD = Credentials.credentials['password']
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False
 
 
 # Internationalization

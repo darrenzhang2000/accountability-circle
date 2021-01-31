@@ -14,22 +14,20 @@ class User(AbstractUser):
     inQueue = models.BooleanField(
         _("Is the user looking for match"), default=False, blank=False
     )
-    goals = models.ForeignKey("Goals", on_delete=models.CASCADE, related_name="users", null=True, blank=True)
+    mission = models.ForeignKey("Mission", on_delete=models.CASCADE, related_name="users", null=True, blank=True)
 
 
-class Goals(models.Model):
-    """Table with major goals:
-    e.g. Health, Job, exercise"""
-
-    GOAL_CHOICES = [
-        ("EXERCISE", "Exercise"),
+class Mission(models.Model):
+    """Table with major Mission:
+    e.g. Health, Job, exercise
+      ("EXERCISE", "Exercise"),
         ("HEALTH", "Health"),
         ("STUDY", "Study"),
         ("HOBBIE", "Hobbie"),
-        ("CAREER", "Career"),
-    ]
+        ("CAREER", "Career"),"""
 
-    goal = models.CharField(max_length=50, choices=GOAL_CHOICES, blank=True)
+
+    mission = models.CharField(max_length=50, blank=True)
 
 
 class Partnership(models.Model):
