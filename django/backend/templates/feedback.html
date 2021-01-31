@@ -20,18 +20,6 @@
         <form>
             <hr>
             <h2>Last week</h2>
-            <div class="row">
-                <div class="col">
-                    <input type="text" class="form-control" placeholder="Partners First name">
-                </div>
-                <div class="col">
-                    <input type="text" class="form-control" placeholder="Partners Last name">
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="exampleFormControlInput1">Email address</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Your email here">
-            </div>
             <div class="form-group">
                 <label for="exampleFormControlSelect1">Rate this weeks productivity (5 being great)</label>
                 <select class="form-control" id="exampleFormControlSelect1">
@@ -82,7 +70,7 @@
                     rows="3"></textarea>
             </div>
 
-            <button type="button" class="btn btn-success">Submit Feedback + This weeks goals</button>
+            <button type="button" class="btn btn-success" onclick="myFunction()">Submit Feedback + This weeks goals</button>
         </form>
 
     </div>
@@ -90,6 +78,11 @@
         integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
         crossorigin="anonymous"></script>
 
+        <script>
+            function myFunction() {
+              alert("The goals are submitted");
+            }
+            </script>
 </body>
 
 </html>
