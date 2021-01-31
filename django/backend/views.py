@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect, HttpResponse
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login as logUser
 
 # Create your views here.
 def login(request):
@@ -11,7 +11,7 @@ def login(request):
         password = request.POST["psw"]
         user = authenticate(request, email=email, password=password)
         if user is not None:
-            login(request, user)
+            logUser(request, user)
             return HttpResponseRedirect("/")
         return render(
             request, "login.html", {"email": email, "password": password}
