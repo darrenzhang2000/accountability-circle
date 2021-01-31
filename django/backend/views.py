@@ -138,7 +138,7 @@ def new_weekly(request):
 
 
 def weekly(request):
-    return render()
+    return render(request,'feedback.html')
 
 
     """ The user is going to set his weekly Goals"""
