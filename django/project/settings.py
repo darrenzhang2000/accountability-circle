@@ -110,6 +110,11 @@ AUTH_USER_MODEL = 'backend.User'
 # User login redirect
 
 LOGIN_REDIRECT_URL = '/'
+
+# Authenticate with email
+AUTHENTICATION_BACKENDS = ['backend.Authentication.EmailBackend']
+
+
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 

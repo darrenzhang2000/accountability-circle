@@ -5,3 +5,8 @@ from . import models
 class UserForm(forms.ModelForm):
     pass
     
+class GoalsForm(forms.ModelForm):
+
+    class Meta:
+        model = models.Goals
+        fields = ['goal']
