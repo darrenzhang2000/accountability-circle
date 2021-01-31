@@ -1,5 +1,5 @@
-# Flask-Auth
-# accountability-circle
+# accountability-circle 
+An App to find friends to help yourself reach your goals!
 
 ## Installation
 
