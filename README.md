@@ -1,42 +1,41 @@
-# accountability-circle 
+# Accountability Circle 
 An App to find friends to help yourself reach your goals!
 
 ## Installation
 
 Clone it 
-```bash
+```python
 git clone https://github.com/darrenzhang2000/accountability-circle.git
 ```
 Create an virtual enviroment
-```bash
-$ on Linux, python3, on Windows, Python
+```python
+# on Linux, python3, on Windows, Python
 python3 -m venv venv
 ```
 Initialize the virtual environ
-```bash
-$ on Linux
+```python
+# on Linux
 source ./venv/bin/activate
-$ On Windows
+# On Windows
 /venv/Scripts/activate.exe
 ```
 cd into the folder
-```bash
+```python
 cd accountability-circle
 ```
 Install the required dependencies
-```bash
+```python
 pip install -r requirements.txt
 ```
 Cd into django
-```bash
+```python
 cd django
 ```
 Apply the migrations
-```bash
+```python
 python manage.py migrate
 ```
 Start the developer server
 ```python
 python manage.py runserver
 ```
-
