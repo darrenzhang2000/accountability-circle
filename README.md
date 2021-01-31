@@ -1,2 +1,0 @@
-# Flask-Auth
-# accountability-circle
