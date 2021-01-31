@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Your Goals</h1>
+
+    <table>
+        <tr>
+            <th>Date</th>
+            <th>Goal</th>
+        </tr>
+        {% for goalObject in your_goals %}
+            <tr>
+                <td>{{ goalObject["date"] }}</td>
+                <td>{{ goalObject["goal"] }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+
+    
+    <h1>Your Partner's Goals</h1>
+
+    <table>
+        <tr>
+            <th>Date</th>
+            <th>Goal</th>
+        </tr>
+        {% for goalObject in partner_goals %}
+            <tr>
+                <td>{{ goalObject["date"] }}</td>
+                <td>{{ goalObject["goal"] }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
