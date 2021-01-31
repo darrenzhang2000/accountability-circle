@@ -65,6 +65,65 @@ def displayMissions(request):
     mission = Mission.objects.all()
     return render(request, "missionCategories.html", {"missions": mission})
 
+def display_goals(request):
+
+    your_goals = [
+        {
+            "date": "01-30-2021",
+            "goal": "Do 5 LeetCode questions"
+        },
+        {
+            "date": "02-07-2021",
+            "goal": "Do 5 LeetCode questions"
+        },
+        {
+            "date": "02-14-2021",
+            "goal": "Do 10 LeetCode questions"
+        },
+        {
+            "date": "02-21-2021",
+            "goal": "Do 10 LeetCode questions"
+        },
+        {
+            "date": "03-01-2021",
+            "goal": "Do 10 LeetCode questions"
+        },
+        {
+            "date": "03-07-2021",
+            "goal": "Do 15 LeetCode questions"
+        }
+    ]
+
+
+    partner_goals = [
+        {
+            "date": "01-30-2021",
+            "goal": "Do 3 LeetCode questions"
+        },
+        {
+            "date": "02-07-2021",
+            "goal": "Do 3 LeetCode questions"
+        },
+        {
+            "date": "02-14-2021",
+            "goal": "Do 5 LeetCode questions"
+        },
+        {
+            "date": "02-21-2021",
+            "goal": "Do 5 LeetCode questions"
+        },
+        {
+            "date": "03-01-2021",
+            "goal": "Do 10 LeetCode questions"
+        },
+        {
+            "date": "03-07-2021",
+            "goal": "Do 15 LeetCode questions"
+        }
+    ]
+
+    return render(request, "goalTables.html", {"your_goals":your_goals,"partner_goals":partner_goals})
+
 
 def match(request):
     """ Match the user against another one """
@@ -72,7 +131,10 @@ def match(request):
     return HttpResponse("Sent")
 
 def new_weekly(request):
-    return render('new_feedback.tml')
+    return render(request, 'new_feedback.html')
+
+
+
 
 
 def weekly(request):
