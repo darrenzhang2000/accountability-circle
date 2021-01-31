@@ -87,6 +87,11 @@ def weekly(request):
         return HttpResponse("Method not Allowed")
 
 
+
+def success(request):
+
+    return render(request, "success.html")
+
 def feedback(request):
 
     return render(request, "feedback.html")

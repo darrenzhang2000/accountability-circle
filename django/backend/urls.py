@@ -10,6 +10,7 @@ urlpatterns = [
 
     # this need to be implemented
     path('settings/', views.edit, name='edit'),
+    path('success/', views.sucess, name='sucess'),
     path('weekly/', views.weekly, name='weekly'),
     path('feedback/', views.feedback, name='feedback'),
     path('match/', views.match, name='match'),
