@@ -4,7 +4,6 @@ from django.contrib.auth import authenticate, login as logUser
 from django.urls import reverse
 from django.db import IntegrityError
 from .models import User, Mission
-from . import Credentials
 from django.core.mail import send_mail
 
 
@@ -13,6 +12,7 @@ def register(request):
     """ Registration of new User """
 
     if request.method == "POST":
+        
         email = request.POST["email"]
         password = request.POST["psw"]
         password_confirmation = request.POST["psw-repeat"]
@@ -68,18 +68,16 @@ def displayMissions(request):
 
 def match(request):
     """ Match the user against another one """
-    send_mail(
-        'Subject here',
-        'Here is the message.',
-        Credentials.credentials['email'],
-        ['daniel.passy@gmail.com'],
-        fail_silently=False,
-    )
+
     return HttpResponse("Sent")
 
 
 
 def weekly(request):
+    return render()
+
+
+    """ The user is going to set his weekly Goals"""
     pass
     if request.method == "POST":
         pass
