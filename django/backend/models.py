@@ -14,7 +14,7 @@ class User(AbstractUser):
     inQueue = models.BooleanField(
         _("Is the user looking for match"), default=False, blank=False
     )
-    goals = models.ForeignKey("Goals", on_delete=models.CASCADE, related_name="users")
+    goals = models.ForeignKey("Goals", on_delete=models.CASCADE, related_name="users", null=True, blank=True)
 
 
 class Goals(models.Model):
