@@ -7,7 +7,7 @@ class User(AbstractUser):
     """Default user"""
 
     name = models.CharField(_("Name of User"), blank=True, max_length=255)
-    email = models.EmailField(_("email address"), blank=False)
+    email = models.EmailField(_("email address"), blank=False, unique=True)
     has_partner = models.BooleanField(
         _("Is the user partened"), default=False, blank=False
     )

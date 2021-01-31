@@ -1,16 +1,25 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/register.css') }}">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/register.css' %}">
     <title>Login</title>
 </head>
 <body>
-    <form action="/signup" method="POST" style="border:1px solid #ccc">
-        <div class="container">
+    <form action="/register/" method="POST" style="border:1px solid #ccc">
+        {% csrf_token %}
+
+
         <h1>Sign Up</h1>
         <p>Please fill in this form to create an account.</p>
+        <div class="container">
+            {% if error %}
+                <div class="Error">
+                {{error}}
+                </div>
+            {% endif %}
         <hr>
     
         <label for="email"><b>Email</b></label>
