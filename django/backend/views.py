@@ -71,6 +71,8 @@ def match(request):
 
     return HttpResponse("Sent")
 
+def new_weekly(request):
+    return render('new_feedback.tml')
 
 
 def weekly(request):
